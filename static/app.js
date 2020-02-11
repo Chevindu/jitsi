@@ -8,7 +8,8 @@ const options = {
     roomName: 'fypwebui',
     width: 500,
     height: 500,
-    parentNode: document.querySelector('#meet')
+    parentNode: document.querySelector('#meet'),
+    noSsl: false
 };
 
 // Toggle Jitsi element
