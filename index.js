@@ -1,8 +1,11 @@
 var express = require('express');
+var cors = require('cors')
 var app = express();
 var http = require('http').createServer(app);
 var io = require('socket.io')(http);
 var port = process.env.PORT || 3000;
+
+app.use(cors());
 
 app.use(express.static('static'));
 
@@ -55,6 +58,6 @@ io.on('connection', function (socket) {
 	});
 });
 
-http.listen(3000, () => {
+http.listen(port, () => {
 	console.log('Control interface is live on http://localhost:3000');
 });
