@@ -60,5 +60,5 @@ io.on('connection', function (socket) {
 
 http.listen(port, () => {
 	console.log('Listening at port: ', port);
-	console.log('Control interface is live on http://localhost:3000');
+	console.log('On localhost, visit: http://localhost:3000');
 });
